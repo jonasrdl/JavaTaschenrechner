@@ -3,7 +3,6 @@ package com.jonasriedel;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -24,6 +23,7 @@ public class Main {
             System.out.println("Zweite Zahl:");
             int zahl2 = sc.nextInt();
             int summe = zahl1 + zahl2;
+            System.out.println(zahl1 + " + " + zahl2 + " = " +  summe);
             System.out.println("Ergebnis: " + summe);
         }
 
@@ -33,6 +33,7 @@ public class Main {
             System.out.println("Zweite Zahl:");
             int zahl2 = sc.nextInt();
             int summe = zahl1 - zahl2;
+            System.out.println(zahl1 + " - " + zahl2 + " = " +  summe);
             System.out.println("Ergebnis: " + summe);
         }
 
@@ -42,6 +43,7 @@ public class Main {
             System.out.println("Zweite Zahl:");
             int zahl2 = sc.nextInt();
             int summe = zahl1 * zahl2;
+            System.out.println(zahl1 + " * " + zahl2 + " = " +  summe);
             System.out.println("Ergebnis: " + summe);
         }
 
@@ -51,6 +53,7 @@ public class Main {
             System.out.println("Zweite Zahl:");
             int zahl2 = sc.nextInt();
             int summe = zahl1 / zahl2;
+            System.out.println(zahl1 + " / " + zahl2 + " = " +  summe);
             System.out.println("Ergebnis: " + summe);
         }
     }
