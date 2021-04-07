@@ -1,6 +1,5 @@
 package com.jonasriedel;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -65,8 +64,6 @@ public class Main {
                 System.out.println("Ergebnis: " + summe);
             }
         }
-
-        System.out.println("TEST");
 
         if (language.equalsIgnoreCase("english")) {
 
