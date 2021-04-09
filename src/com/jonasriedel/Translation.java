@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -15,12 +16,8 @@ public class Translation {
     public boolean loadConfig(String path) {
 
         try {
-            File file = new File(path);
-            if (!file.canRead()) {
-                System.err.println("Provided file can't be read");
-                return false;
-            }
-            Scanner sc = new Scanner(file);
+            InputStream input = getClass().getResourceAsStream(path);
+            Scanner sc = new Scanner(input);
             StringBuilder fileContent = new StringBuilder();
             if (sc.hasNextLine()) {
                 fileContent.append(sc.nextLine());
@@ -36,7 +33,7 @@ public class Translation {
                 System.err.println("Provided file is in wrong format");
                 return false;
             }
-        } catch (FileNotFoundException e) {
+        } catch (NullPointerException e) {
             System.err.println("Provided file could not be found");
             return false;
         }

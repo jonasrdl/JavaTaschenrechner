@@ -9,12 +9,12 @@ public class Main {
     public static void main(String[] args) {
         t = new Translation();
 
-        if (!t.loadConfig("src\\com\\jonasriedel\\assets\\german.json")) {
+        if (!t.loadConfig("/com/jonasriedel/assets/german.json")) {
             System.err.println("File could not be loaded from the specified path");
             System.exit(1);
         }
 
-        if (!t.loadConfig("src\\com\\jonasriedel\\assets\\english.json")) {
+        if (!t.loadConfig("/com/jonasriedel/assets/english.json")) {
             System.err.println("File could not be loaded from the specified path");
             System.exit(1);
         }
