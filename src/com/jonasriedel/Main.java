@@ -69,11 +69,17 @@ public class Main {
             if (input.equalsIgnoreCase("dividieren") || input.equalsIgnoreCase("/")) {
                 System.out.println("Erste Zahl:");
                 int zahl1 = sc.nextInt();
+
                 System.out.println("Zweite Zahl:");
                 int zahl2 = sc.nextInt();
-                int summe = zahl1 / zahl2;
-                System.out.println(zahl1 + " / " + zahl2 + " = " + summe);
-                System.out.println("Ergebnis: " + summe);
+
+                if ((zahl2 == 0)) {
+                    System.out.println("Durch 0 kann man nicht teilen, versuchs nochmal :)");
+                } else {
+                    int summe = zahl1 / zahl2;
+                    System.out.println(zahl1 + " / " + zahl2 + " = " + summe);
+                    System.out.println("Ergebnis: " + summe);
+                }
             }
         } catch (InputMismatchException e) {
             System.out.println("Zahl zu lang... Nochmal von vorne");
@@ -83,7 +89,7 @@ public class Main {
         Scanner nochmal = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Das war toll! Nochmal? J/N.");
+            System.out.println("Nochmal? J/N.");
 
             String entscheidung = nochmal.nextLine();
 
