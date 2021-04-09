@@ -1,10 +1,8 @@
 package com.jonasriedel;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import libs.org.json.JSONException;
+import libs.org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -14,7 +12,6 @@ public class Translation {
     private HashMap<String, JSONObject> translations = new HashMap<>();
 
     public boolean loadConfig(String path) {
-
         try {
             InputStream input = getClass().getResourceAsStream(path);
             Scanner sc = new Scanner(input);
@@ -26,6 +23,7 @@ public class Translation {
             while (sc.hasNextLine()) {
                 fileContent.append("\n").append(sc.nextLine());
             }
+
             try {
                 JSONObject dict = new JSONObject(fileContent.toString());
                 translations.put(dict.get("language").toString(), dict.getJSONObject("translations"));
@@ -55,8 +53,4 @@ public class Translation {
             return "";
         }
     }
-
-    /* public void muelltest(String key) {
-        System.out.println(translations.get(key).toString());
-    } */
 }

@@ -1,7 +1,7 @@
 {
   "language": "german",
   "translations": {
-    "language_alias": "g(er(man)?)?|d(eutsch)?",
+    "language_alias": "g(e(r(m(a(n)?)?)?)?)?|d(e(u(t(s(c(h)?)?)?)?)?)?",
     "choose_calculation": "Welche Rechenart möchtest du wählen? Addieren(+), Subtrahieren(-), Multiplizieren(*) oder Dividieren(/)",
     "calc_type": {
       "add": "(\\+|add(ieren)?)( )*",

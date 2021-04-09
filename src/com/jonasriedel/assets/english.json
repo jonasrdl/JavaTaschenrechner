@@ -2,7 +2,6 @@
   "language": "english",
   "translations": {
     "language_alias": "e(n(g(l(i(s(h)?)?)?)?)?)?|englisc(h)?",
-
     "choose_calculation": "Which type of calculation do you want to choose? Add (+), Subtract (-), Multiply (*) or Divide (/)",
     "calc_type": {
       "add": "(\\+|add)( )*",
