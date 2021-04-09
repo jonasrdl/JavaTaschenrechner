@@ -1,0 +1,23 @@
+{
+  "language": "english",
+  "translations": {
+    "language_alias": "e(n(g(l(i(s(h)?)?)?)?)?)?|englisc(h)?",
+
+    "choose_calculation": "Which type of calculation do you want to choose? Add (+), Subtract (-), Multiply (*) or Divide (/)",
+    "calc_type": {
+      "add": "(\\+|add)( )*",
+      "subtract": "-|subtract",
+      "multiply": "\\*|mul(t(iply)?)?",
+      "divide": "/|divide"
+    },
+    "first_number": "First number: ",
+    "second_number": "Second number: ",
+    "result": "Result: <result>",
+    "divide_by_zero": "You cannot divide by 0, try again :)",
+    "number_too_long": "Number too long ... Start over again",
+    "again": "Again? Y/N",
+    "confirm": "y(e(s)?)?",
+    "deny": "no?",
+    "goodbye": "See ya :)"
+  }
+}
