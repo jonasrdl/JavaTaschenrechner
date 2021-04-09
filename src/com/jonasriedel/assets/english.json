@@ -13,7 +13,7 @@
     "second_number": "Second number: ",
     "result": "Result: <result>",
     "divide_by_zero": "You cannot divide by 0, try again :)",
-    "number_too_long": "Number too long ... Start over again",
+    "wrong_number_format": "Not a valid number",
     "again": "Again? Y/N",
     "confirm": "y(e(s)?)?",
     "deny": "no?",

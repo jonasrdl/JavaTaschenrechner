@@ -13,7 +13,7 @@
     "second_number": "Zweite Zahl: ",
     "result": "Ergebnis: <result>",
     "divide_by_zero": "Durch 0 kann man nicht teilen, versuchs nochmal :)",
-    "number_too_long": "Zahl zu lang... Nochmal von vorne",
+    "wrong_number_format": "Keine gültige Zahl",
     "again": "Nochmal? J/N",
     "confirm": "ja?|y(e(s)?)?",
     "deny": "no?|ne(i(n)?)?",

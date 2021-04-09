@@ -32,59 +32,61 @@ public class Main {
         }
     }
 
+    public static double[] requestTwoNumbers(Scanner sc, String language) {
+        System.out.println(t.getValue("first_number", language));
+        double zahl1 = sc.nextDouble();
+        System.out.println(t.getValue("second_number", language));
+        double zahl2 = sc.nextDouble();
+        return new double[]{zahl1, zahl2};
+    }
+
+    public static String fmt(double d) {
+        if (d == (long) d)
+            return String.format("%d", (long) d);
+        else
+            return String.format("%s", d);
+    }
+
     public static void calculator(String language) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println(t.getValue("choose_calculation", language));
-        String input = sc.nextLine();
+        String calc_type = sc.nextLine();
 
         try {
-            if (input.toLowerCase().matches(t.getValue("calc_type.add", language))) {
-                System.out.println(t.getValue("first_number", language));
-                int zahl1 = sc.nextInt();
-                System.out.println(t.getValue("second_number", language));
-                int zahl2 = sc.nextInt();
-                int summe = zahl1 + zahl2;
-                System.out.println(zahl1 + " + " + zahl2 + " = " + summe);
-                System.out.println(t.getValue("result", language).replaceAll("<result>", String.valueOf(summe)));
+            if (calc_type.toLowerCase().matches(t.getValue("calc_type.add", language))) {
+                double[] input = requestTwoNumbers(sc, language);
+                double summe = input[0] + input[1];
+                System.out.println(fmt(input[0]) + " + " + fmt(input[1]) + " = " + fmt(summe));
+                System.out.println(t.getValue("result", language).replaceAll("<result>", String.valueOf(fmt(summe))));
             }
 
-            if (input.toLowerCase().matches(t.getValue("calc_type.subtract", language))) {
-                System.out.println(t.getValue("first_number", language));
-                int zahl1 = sc.nextInt();
-                System.out.println(t.getValue("second_number", language));
-                int zahl2 = sc.nextInt();
-                int summe = zahl1 - zahl2;
-                System.out.println(zahl1 + " - " + zahl2 + " = " + summe);
-                System.out.println(t.getValue("result", language).replaceAll("<result>", String.valueOf(summe)));
+            if (calc_type.toLowerCase().matches(t.getValue("calc_type.subtract", language))) {
+                double[] input = requestTwoNumbers(sc, language);
+                double differenz = input[0] - input[1];
+                System.out.println(fmt(input[0]) + " - " + fmt(input[1]) + " = " + fmt(differenz));
+                System.out.println(t.getValue("result", language).replaceAll("<result>", String.valueOf(fmt(differenz))));
             }
 
-            if (input.toLowerCase().matches(t.getValue("calc_type.multiply", language))) {
-                System.out.println(t.getValue("first_number", language));
-                int zahl1 = sc.nextInt();
-                System.out.println(t.getValue("second_number", language));
-                int zahl2 = sc.nextInt();
-                int summe = zahl1 * zahl2;
-                System.out.println(zahl1 + " * " + zahl2 + " = " + summe);
-                System.out.println(t.getValue("result", language).replaceAll("<result>", String.valueOf(summe)));
+            if (calc_type.toLowerCase().matches(t.getValue("calc_type.multiply", language))) {
+                double[] input = requestTwoNumbers(sc, language);
+                double produkt = input[0] * input[1];
+                System.out.println(fmt(input[0]) + " * " + fmt(input[1]) + " = " + fmt(produkt));
+                System.out.println(t.getValue("result", language).replaceAll("<result>", String.valueOf(fmt(produkt))));
             }
 
-            if (input.toLowerCase().matches(t.getValue("calc_type.divide", language))) {
-                System.out.println(t.getValue("first_number", language));
-                int zahl1 = sc.nextInt();
-                System.out.println(t.getValue("second_number", language));
-                int zahl2 = sc.nextInt();
-
-                if ((zahl2 == 0)) {
+            if (calc_type.toLowerCase().matches(t.getValue("calc_type.divide", language))) {
+                double[] input = requestTwoNumbers(sc, language);
+                if ((input[1] == 0)) {
                     System.out.println(t.getValue("divide_by_zero", language));
                 } else {
-                    int summe = zahl1 / zahl2;
-                    System.out.println(zahl1 + " / " + zahl2 + " = " + summe);
-                    System.out.println(t.getValue("result", language).replaceAll("<result>", String.valueOf(summe)));
+                    double quotient = input[0] / input[1];
+                    System.out.println(fmt(input[0]) + " / " + fmt(input[1]) + " = " + fmt(quotient));
+                    System.out.println(t.getValue("result", language).replaceAll("<result>", String.valueOf(fmt(quotient))));
                 }
             }
         } catch (InputMismatchException e) {
-            System.out.println(t.getValue("number_too_long", language));
+            System.out.println(t.getValue("wrong_number_format", language));
             calculator(language);
         }
 
