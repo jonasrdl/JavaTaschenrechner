@@ -38,9 +38,9 @@ public class Translation {
         return true;
     }
 
-    public String getValue(String key, String language) { // key = "unterpunkt1.key123";
+    public String getValue(String key, String language) {
         try {
-            String[] path = key.split("\\."); // String[] path = ["unterpunkt1", "xyz", "key123"];
+            String[] path = key.split("\\."); 
 
             JSONObject v = translations.get(language);
 
