@@ -1,7 +1,7 @@
-JavaTaschenrechner.userlibraries
+.idea
+.metadata
+out
+.classpath
+JavaTaschenrechner.eml
 JavaTaschenrechner.iml
-JavaTaschenrechner.eml.project
-META-INF\
-out\
-.metadata\
-.idea\
+JavaTaschenrechner.userlibraries
