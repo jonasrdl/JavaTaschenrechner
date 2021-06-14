@@ -1,0 +1,23 @@
+{
+  "language": "german",
+  "translations": {
+    "language_alias": "g(e(r(m(a(n)?)?)?)?)?|d(e(u(t(s(c(h)?)?)?)?)?)?",
+    "choose_calculation": "Welche Rechenart möchtest du wählen? Addieren(+), Subtrahieren(-), Multiplizieren(*) oder Dividieren(/)",
+    "calc_type": {
+      "add": "(\\+|add(ieren)?)( )*",
+      "subtract": "-|sub(trahieren)?",
+      "multiply": "\\*|mult(iplizieren)?|mul(t(iply)?)?",
+      "divide": "/|div(idieren)?|divide"
+    },
+    "first_number": "Erste Zahl: ",
+    "second_number": "Zweite Zahl: ",
+    "result": "Ergebnis: <result>",
+    "divide_by_zero": "Durch 0 kann man nicht teilen, versuchs nochmal :)",
+    "wrong_number_format": "Keine gültige Zahl",
+    "again": "Nochmal? J/N",
+    "confirm": "ja?|y(e(s)?)?",
+    "deny": "no?|ne(i(n)?)?",
+    "goodbye": "Wir sehen uns :)"
+  }
+}
+
