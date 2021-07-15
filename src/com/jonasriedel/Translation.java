@@ -2,15 +2,12 @@ package com.jonasriedel;
 
 import libs.org.json.JSONException;
 import libs.org.json.JSONObject;
-
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class Translation {
-
     private HashMap<String, JSONObject> translations = new HashMap<>();
-
     public boolean loadConfig(String path) {
         try {
             InputStream input = getClass().getResourceAsStream(path);
